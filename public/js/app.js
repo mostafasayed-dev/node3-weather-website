@@ -1,4 +1,4 @@
-console.log('Client side javascript file is loaded!')
+// console.log('Client side javascript file is loaded!')
 
 //fetch api is a browser(client side) method - not a nodejs method
 // fetch('http://puzzle.mead.io/puzzle').then((response) => {
@@ -7,16 +7,16 @@ console.log('Client side javascript file is loaded!')
 //     })
 // })
 
-fetch('http://localhost:3000/weather?address=Boston').then((response) => {
-    response.json().then((jsonData) => {
-        if(jsonData.error){
-            console.log(jsonData.error)
-        }else{
-            console.log(jsonData.location)
-            console.log(jsonData.forecast)
-        }
-    })
-})
+// fetch('http://localhost:3000/weather?address=Boston').then((response) => {
+//     response.json().then((jsonData) => {
+//         if(jsonData.error){
+//             console.log(jsonData.error)
+//         }else{
+//             console.log(jsonData.location)
+//             console.log(jsonData.forecast)
+//         }
+//     })
+// })
 
 const weatherForm = document.querySelector('form')
 const searchElement = document.querySelector('input')
