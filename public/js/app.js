@@ -22,11 +22,13 @@ const weatherForm = document.querySelector('form')
 const searchElement = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
+const messageThree = document.querySelector('#message-3')
 
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault()//prevent default form behaviour from reloading the page
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
+    messageThree.textContent = ''
 
     const location = searchElement.value
     // const url = 'http://localhost:3000/weather?address=' + location
@@ -41,9 +43,9 @@ weatherForm.addEventListener('submit', (event) => {
                 messageOne.textContent = jsonData.location
                 //console.log(jsonData.forecast)
                 messageTwo.textContent = jsonData.forecast.description 
-                                        + '. It feels like ' + jsonData.forecast.feelslike
-                                        + ', temprature is ' + jsonData.forecast.temperature
-                                        + ' and humidity is ' + jsonData.forecast.humidity
+                                        + '. It feels like ' + jsonData.forecast.feelslike + "° out."
+                messageThree.textContent = 'It is currently ' + jsonData.forecast.temperature + "°C"
+                                            + ' and humidity is ' + jsonData.forecast.humidity + "%."
             }
         })
     })
