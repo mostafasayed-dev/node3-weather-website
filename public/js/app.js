@@ -42,7 +42,8 @@ weatherForm.addEventListener('submit', (event) => {
                 //console.log(jsonData.forecast)
                 messageTwo.textContent = jsonData.forecast.description 
                                         + '. It feels like ' + jsonData.forecast.feelslike
-                                        + ' and temprature is ' + jsonData.forecast.temperature
+                                        + ', temprature is ' + jsonData.forecast.temperature
+                                        + ' and humidity is ' + jsonData.forecast.humidity
             }
         })
     })
